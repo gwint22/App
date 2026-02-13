@@ -1,0 +1,207 @@
+:root {
+  --bg: #0b1020;
+  --card: #151d35;
+  --muted: #93a3c2;
+  --text: #edf2ff;
+  --accent: #7ea6ff;
+  --accent-2: #47e0a1;
+  --danger: #ff6f8d;
+  --line: #273253;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #19284d 0%, var(--bg) 55%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem;
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.top-bar p {
+  margin-top: 0.25rem;
+  color: var(--muted);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: linear-gradient(170deg, #1a2544 0%, var(--card) 100%);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.28);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  border-bottom: 1px dashed #33436f;
+}
+
+.xp-wrap {
+  margin-top: 0.8rem;
+}
+
+.xp-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.xp-bar {
+  margin-top: 0.4rem;
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  background: #0d142b;
+  border: 1px solid #324372;
+  overflow: hidden;
+}
+
+.xp-progress {
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #9bc4ff);
+  transition: width 0.25s ease;
+}
+
+.tip {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.action-form,
+.habit-form {
+  display: grid;
+  gap: 0.6rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid #38538d;
+  background: #0f1730;
+  color: var(--text);
+  padding: 0.6rem;
+}
+
+button {
+  background: linear-gradient(130deg, #2c5de7, #3f86ff);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.secondary {
+  margin-top: 0.8rem;
+  width: 100%;
+  background: #18213f;
+  border: 1px solid #32477d;
+}
+
+.action-log,
+.habit-list {
+  margin: 0.8rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.action-log li,
+.habit-list li {
+  border: 1px solid #2d3f70;
+  background: #101830;
+  padding: 0.55rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.habit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.habit-item input[type='checkbox'] {
+  transform: scale(1.25);
+  accent-color: var(--accent-2);
+}
+
+.habit-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.delete-btn {
+  border: 1px solid #553a48;
+  background: #2b1321;
+  color: #ffb4c3;
+  padding: 0.25rem 0.45rem;
+}
+
+.attribute-grid {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.attribute-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.attribute-name {
+  color: var(--muted);
+}
+
+.attribute-value {
+  font-weight: 700;
+}
+
+.attribute-tag {
+  font-size: 0.74rem;
+  border: 1px solid #30535f;
+  color: #9fe5d0;
+  border-radius: 999px;
+  padding: 0.1rem 0.45rem;
+}
